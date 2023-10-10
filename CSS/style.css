@@ -1,0 +1,80 @@
+body{
+    background-color: #fff;
+    margin: 0;
+    /* uses flex to maintain responsive vertical and horizontal centering */
+    display: flex; 
+    /* centre horizontally */
+    align-items: center;
+    /* centre vertically */
+    justify-content: center;
+    /* must specify height for vertical centering to work */
+    height: 100vh;
+}
+#master-container{
+    /* fix dimensions of the main box */
+    width: 700px;
+    height: 600px;
+    /* add colour and shadow */
+    background-color:aliceblue;
+    filter: drop-shadow(0px 0px 10px gray);
+}
+#forecast-container{
+    /* using flex to arrange days as a row */
+    display: flex;
+}
+.day{
+    /* constraining dimensions of each day to match box's overall height and width */
+    width: 100px;
+    height: 100px;
+}
+.button:hover{
+    /* changing colour on rollover */
+    background-color:#F2D5CE;
+}
+.button:active{
+    /* changing colour on click */
+    background-color:#F26D3D;
+}
+h4{
+    /* styling all h4 text elements */
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0c0c0c;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+#city-text{
+    /* styling just the city name h4 text */
+    /* match line height and font size for better control of position and margin */
+    font-size: 40px;
+    line-height: 40px;
+    /* position must be absolute to fit within parent object */
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    margin: 0;
+    /* set colour and transparency of overlay text */
+    color: rgba(100%, 100%, 100%, .7)
+}
+#hero-container{
+    /* parent of any 'absolute'-positioned object must be relative */
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
+#city-image{
+    /* fit the image to fill the container without distortion */
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+}
+.weather-icon{
+    width: 40px;
+    height: 40px;
+    /* centering the icons horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    display:block
+}
